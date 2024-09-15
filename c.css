@@ -1,0 +1,104 @@
+body{
+    background: rgb(0, 19, 42);
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+#display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row-reverse;
+    /* border: 1px solid white; */
+    width: 99.8vw;
+    height: 99.5vh;
+}
+#display > #settings{
+    /* border: 1px solid white; */
+    width: 20%;
+    height: 70%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column;
+    align-items: center;
+}
+#display > #passHolder{
+    width: 78%;
+    height: 30%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    cursor:pointer;
+}
+#display > #passHolder::-webkit-scrollbar{
+    display: none;
+}
+#display > #passHolder > #passEffect{
+    width: 75%;
+    height: 40%;
+    position: fixed;
+    animation: passEffect 7s linear infinite;
+    background: linear-gradient(0deg, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+    transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a,
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+     transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a,
+      transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, transparent, transparent, transparent, #00132a, 
+      transparent, transparent);
+
+}
+#display > #passHolder > #password{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: limegreen;
+    font-size: 100px;
+    font-family: monospace;
+    user-select: none;
+}
+#display > #settings >.buts{
+    overflow: hidden;
+    user-select: none;
+    transition: 0.5s;
+    border: 1px solid limegreen;
+    width: 70%;
+    height: 10%;
+    cursor: pointer;
+    display: flex;
+    color: lime;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: monospace;
+    border-radius: 20px;
+}
+#display > #settings >.buts:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
+
+@keyframes passEffect {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-40%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
