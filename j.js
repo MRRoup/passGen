@@ -1,3 +1,4 @@
+setInterval(()=>{tit.innerHTML = "password generator"},10000)
 let buttons = document.querySelectorAll('.buts');
 let clickTimeout;  
 let passLength = 4
@@ -27,6 +28,7 @@ const passMaker = (len,lower,upper,num,char)=>{
 
     // Math.floor(Math.random() * 100) + 1;  
     password.innerHTML = ""
+    tit.innerHTML = ""
     len--
     let fr = setInterval(()=>{
         len==0?clearInterval(fr):len--
@@ -35,6 +37,8 @@ const passMaker = (len,lower,upper,num,char)=>{
         :order[thing] == "upper"? password.innerHTML+=upperCase[Math.floor(Math.random() * 26)] 
         :order[thing] == "nums"? password.innerHTML+=nums[Math.floor(Math.random() * 10)] 
         :order[thing] == "chars"? password.innerHTML+=chars[Math.floor(Math.random() * 10)] : ""
+        tit.innerHTML += password.innerHTML[(password.innerHTML).length-1]
+        
     },5*len)
         
 }
